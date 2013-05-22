@@ -15,6 +15,7 @@ a {
 }
 .breadcrumb {
     margin-bottom: 0px;
+    background: #F0FCFC;
 }
 h1 {
     color: #FF7400;
@@ -63,4 +64,7 @@ footer p {
 }
 .bottom {
     border-bottom: 0;
+}
+table.glaze tr td:first-child {
+    font-weight: bold;
 }
