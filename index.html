@@ -13,11 +13,18 @@
     <script src="js/jquery.reel-min.js" type="text/javascript"></script>
     
     <script>
-        jQuery(function ($) {
-            $(".glazelink").tooltip({
-                placement: 'right',
-                title: 'Click for recipe'
-            })
+        $(document).ready(function(e) {
+            jQuery(function ($) {
+                $(".glazelink").tooltip({
+                    placement: 'right',
+                    title: 'Click for recipe'
+                })
+            });
+            
+            $('.breadcrumb a').bind('click', function(e) {
+                e.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top});                                                      
+            });
         });
     </script>
 
@@ -103,7 +110,7 @@
           <div class="container">
               <div class="row">
                 <div class="span12">
-                    <h2><a name="about"></a>About me</h2>
+                    <h2 id="about">About me</h2>
                     <p class="lead">I'm a human being that makes things.</p>
                 </div>
               </div>
