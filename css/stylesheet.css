@@ -1,7 +1,66 @@
-
+/* http://colorschemedesigner.com/#3i31Aw0w0w0w0 */
+/* http://colorschemedesigner.com/#3i62Cw0w0w0w0 */
+html,
+body {
+    height: 100%;
+    background: #fff;
+}
+a {
+    color: #FF7400;
+}
+.page-header {
+    border-bottom: 1px solid #FF9640;
+    margin-bottom: 0;
+    background: url('../images/otmark.png') top right no-repeat;
+}
+.breadcrumb {
+    margin-bottom: 0px;
+}
+h1 {
+    color: #FF7400;
+}
+h2 {
+    color: #009999;
+}
+.container {
+    background: #fff;
+    padding: 0px 20px 20px 20px;
+}
 .itemcol {
     min-width: 510px !important; 
 }
 .customreel {
-    border: 3px solid #009999;
+    /*border: 3px solid #009999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;*/
+}
+p {
+    color: #006363;
+}
+footer > .container {
+    padding: 20px 0px;
+}
+footer,
+footer > .container {
+    background: #009999;
+}
+footer p {
+    color: #fff;
+    margin: 0;
+}
+.about,
+.about > .container  {
+    background: #5CCCCC;
+}
+.about h2,
+.about p {
+    color: #fff;
+}
+.item {
+    padding-top: 30px;
+    border-bottom: 1px dotted #FF9640;
+}
+.bottom {
+    border-bottom: 0;
 }
