@@ -13,6 +13,12 @@ a {
     margin-bottom: 0;
     background: url('../images/otmark.png') top right no-repeat;
 }
+<<<<<<< HEAD
+=======
+.page-header small {
+    color: #009999;
+}
+>>>>>>> master
 .breadcrumb {
     margin-bottom: 0px;
     background: #F0FCFC;
@@ -28,7 +34,7 @@ h2 {
     padding: 0px 20px 20px 20px;
 }
 .itemcol {
-    min-width: 510px !important; 
+    min-width: 500px !important; 
 }
 .customreel {
     /*border: 3px solid #009999;
