@@ -11,6 +11,15 @@
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.reel-min.js" type="text/javascript"></script>
+    
+    <script>
+        jQuery(function ($) {
+            $(".glazelink").tooltip({
+                placement: 'right',
+                title: 'Click for recipe'
+            })
+        });
+    </script>
 
     <title>Ceramics</title>
   </head>
@@ -50,6 +59,16 @@
               <div class="span3">
                   <h2>Raku Bowl</h2>
                   <p>This is a litte Raku fired bowl with a Hawaiian Blue glaze.</p>
+                  <dl class="dl">
+                    <dt>Firing</dt>
+                    <dd>Raku</dd>
+                    <dt>Glaze</dt>
+                    <dd><a href="#" class="glazelink" data-toggle="collapse" data-target="#demo">Hawaiian Blue</a>
+                    <div id="demo" class="collapse">test</div>
+                    </dd>
+                    <dt>Dimensions</dt>
+                    <dd>&#216;8cm x 10cm high</dd>
+                  </dl>
               </div>
               <div class="span3">
               </div>
