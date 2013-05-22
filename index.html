@@ -6,47 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen" />
-    
-    <script src='http://code.jquery.com/jquery-1.9.1.min.js' type='text/javascript'></script>
-    <script src='js/jquery.reel-min.js' type='text/javascript'></script>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.reel-min.js" type="text/javascript"></script>
 
     <title>Ceramics</title>
   </head>
 
   <body>
-    <div class="container">
-        <header class="page-header">
-          <h1>Ceramics <small>by Owen Tanner</small></h1>
-        </header>
 
-        <div class="row">
-            <div class="span5 itemcol">
-                <img id="image" src='images/raku-bowl.jpg' width="500" height="445" />
-                <script>
-                  $(function(){ // when DOM ready
-            
-                    $('#image').reel({
-                      frames:   15,
-                      footage: 4,
-                      cw: true,
-                      throwable: true,
-                      velocity: 2,
-                      klass: 'customreel'
+      <div class="container">
+          <header class="page-header">
+            <h1>Ceramics <small>by Owen Tanner</small></h1>
+          </header>
+          
+          <div class="row">
+              <div class="span12">     
+                  <ul class="breadcrumb">
+                    <li><a href="#about">About me</a></li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="row item">
+              <div class="span5 itemcol">
+                  <img id="image" src='images/raku-bowl.jpg' width="500" height="445" />
+                  <script>
+                    $(function(){ // when DOM ready
+              
+                      $('#image').reel({
+                        frames:   15,
+                        footage: 4,
+                        cw: true,
+                        throwable: true,
+                        velocity: 2,
+                        klass: 'customreel'
+                      });
                     });
-                  });
-                </script>
-            </div>
-            <div class="span3">
-                <h2>Raku Bowl</h2>
-                <p>This is a litte Raku fired bowl with a Hawaiian Blue glaze.</p>
-            </div>
-            <div class="span3">
+                  </script>
+              </div>
+              <div class="span3">
+                  <h2>Raku Bowl</h2>
+                  <p>This is a litte Raku fired bowl with a Hawaiian Blue glaze.</p>
+              </div>
+              <div class="span3">
+              </div>
+          </div>
+          
+          <div class="row item bottom">
+              <div class="span5 itemcol">
+                  <img id="image" src='images/raku-bowl.jpg' width="500" height="445" />
+                  <script>
+                    $(function(){ // when DOM ready
+              
+                      $('#image').reel({
+                        frames:   15,
+                        footage: 4,
+                        cw: true,
+                        throwable: true,
+                        velocity: 2,
+                        klass: 'customreel'
+                      });
+                    });
+                  </script>
+              </div>
+              <div class="span3">
+                  <h2>Another Raku Bowl</h2>
+                  <p>It's really the same as the last one, silly.</p>
+              </div>
+              <div class="span3">
+              </div>
+          </div>
+      </div>
+      <div class="about">
+          <div class="container">
+              <div class="row">
+                <div class="span12">
+                    <h2><a name="about"></a>About me</h2>
+                    <p class="lead">I'm a human being that makes things.</p>
+                </div>
+              </div>
+          </div>
+      </div>
+      <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <p>&copy 2013 Owen Tanner</p>
+                </div>
             </div>
         </div>
-    </div>
+      </footer>
 
     <script src="js/bootstrap.min.js"></script>
   </body>
