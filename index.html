@@ -3,45 +3,51 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen" />
     
     <script src='http://code.jquery.com/jquery-1.9.1.min.js' type='text/javascript'></script>
     <script src='js/jquery.reel-min.js' type='text/javascript'></script>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+
     <title>Ceramics</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
-
-        <header>
-          <h1>Ceramics</h1>
+    <div class="container">
+        <header class="page-header">
+          <h1>Ceramics <small>by Owen Tanner</small></h1>
         </header>
 
-        <hr>
-        
-        <img id="image" src='images/raku-bowl.jpg' width="500" height="445" />
-        <script>
-          $(function(){ // when DOM ready
-    
-            $('#image').reel({
-              frames:   15,
-              footage: 4,
-              cw: true,
-              throwable: true,
-              velocity: 2
-            });
-    
-          });
-        </script>
-
-      </div>
+        <div class="row">
+            <div class="span5 itemcol">
+                <img id="image" src='images/raku-bowl.jpg' width="500" height="445" />
+                <script>
+                  $(function(){ // when DOM ready
+            
+                    $('#image').reel({
+                      frames:   15,
+                      footage: 4,
+                      cw: true,
+                      throwable: true,
+                      velocity: 2,
+                      klass: 'customreel'
+                    });
+                  });
+                </script>
+            </div>
+            <div class="span3">
+                <h2>Raku Bowl</h2>
+                <p>This is a litte Raku fired bowl with a Hawaiian Blue glaze.</p>
+            </div>
+            <div class="span3">
+            </div>
+        </div>
     </div>
+
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
