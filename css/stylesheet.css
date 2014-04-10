@@ -1,9 +1,9 @@
 /* http://colorschemedesigner.com/#3i31Aw0w0w0w0 */
 /* http://colorschemedesigner.com/#3i62Cw0w0w0w0 */
+/* http://colorschemedesigner.com/#4r62qdAuJp9I1 */
 html,
 body {
     height: 100%;
-    background: #fff;
 }
 a {
     color: #FF7400;
@@ -17,21 +17,24 @@ a {
     color: #009999;
 }
 .breadcrumb {
+    position: relative;
+    z-index: 2;
     margin-bottom: 0px;
     background: #F0FCFC;
 }
 h1 {
     color: #FF7400;
+    text-shadow: 1px 2px 3px #B1BABA;
 }
 h2 {
     color: #009999;
+    text-shadow: 1px 2px 3px #B1BABA;
 }
 .container {
-    background: #fff;
     padding: 0px 20px 20px 20px;
 }
 .itemcol {
-    min-width: 500px !important; 
+
 }
 .customreel {
     /*border: 3px solid #009999;
@@ -48,18 +51,48 @@ footer > .container {
 footer,
 footer > .container {
     background: #009999;
+    z-index: 1;
 }
 footer p {
     color: #fff;
     margin: 0;
 }
+.explained {
+    position: relative;
+    border: 1px solid #5CCCCC;
+    border-top-width: 0px;
+    margin: 20px auto 20px auto;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
 .about,
 .about > .container  {
+    position: relative;
+    z-index: 2;
     background: #5CCCCC;
 }
+.about > .container  {
+
+}
 .about h2,
-.about p {
+.explained h2 {
+    text-shadow: 1px 2px 3px #183333;
+}
+.explained h2 {
+    background: #5CCCCC;
+    padding: 10px;
+    margin-top: 0;
+}
+.about h2,
+.about p,
+.explained h2 {
     color: #fff;
+}
+.explained p {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .item {
     padding-top: 30px;
@@ -70,4 +103,51 @@ footer p {
 }
 table.glaze tr td:first-child {
     font-weight: bold;
+}
+.shadow,
+.shadow-top
+{
+  position: relative;
+}
+.shadow:before, .shadow:after,
+.shadow-top:before, .shadow-top:after
+{
+  z-index: 1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #183333;
+  -webkit-box-shadow: 0 15px 10px #183333;
+  -moz-box-shadow: 0 15px 10px #183333;
+  box-shadow: 0 15px 10px #183333;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.shadow-top:before, .shadow-top:after
+{
+  bottom: 0px;
+  height: 10px;
+  top: 30%;
+  background: #B1BABA;
+  -webkit-box-shadow: 0 15px 10px #B1BABA;
+  -moz-box-shadow: 0 15px 10px #B1BABA;
+  box-shadow: 0 15px 10px #B1BABA;
+}
+.shadow:after,
+.shadow-top:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
 }

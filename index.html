@@ -37,33 +37,123 @@
 
       <div class="container">
           <header class="page-header">
-            <h1>Ceramics <small>by Owen Tanner</small></h1>
+            <h1><span></span>Ceramics <small>by Owen Tanner</small></h1>
           </header>
           
           <div class="row">
-              <div class="span12">     
+              <div class="span12 shadow-top">     
                   <ul class="breadcrumb">
                     <li><a href="#about">About me</a></li>
                   </ul>
               </div>
           </div>
           
+          <!------------------------------------------------------------------->
+          
+          <div id="recent" class="explained">
+              <div class="row">
+                  <div class="span12">     
+                      <h2>Recent work</h2>
+                      <p>This is a selection of my recent work</p>
+                  </div>
+              </div>
+          </div>
+          
           <div class="row item">
               <div class="span6 itemcol">
-                  <img id="image" src='images/raku-bowl.jpg' width="500" height="445" />
-                  <script>
-                    $(function(){ // when DOM ready
-              
-                      $('#image').reel({
-                        frames:   15,
-                        footage: 4,
-                        cw: true,
-                        throwable: true,
-                        velocity: 2,
-                        klass: 'customreel'
-                      });
-                    });
-                  </script>
+                  <img id="image" class="reel" src='images/raku-bowl.jpg' width="500" height="445"
+                    data-frames="15"
+                    data-footage="4"
+                    data-cw="true"
+                    data-throwable="true"
+                    data-velocity="2"
+                    data-responsive="true"
+                    data-klass="customreel"
+                  />
+              </div>
+              <div class="span3">
+                  <h2>Stoneware Bowl</h2>
+                  <p>This is a litte Raku fired bowl with a Hawaiian Blue glaze.</p>
+                  <dl class="dl">
+                    <dt>Firing</dt>
+                    <dd>Raku</dd>
+                    <dt>Glaze</dt>
+                    <dd><a href="#" class="glazelink" data-toggle="collapse" data-target="#hawaiian-blue">Hawaiian Blue</a>
+                        <div id="hawaiian-blue" class="collapse">
+                            <table class="table table-bordered table-hover glaze">
+                                <tbody>
+                                    <tr>
+                                        <td>Gerstley Borate <br />(I used Borax Frit)</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bone Ash</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tin Oxide</td>
+                                        <td>1.3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Copper Carbonate</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cobalt Oxide</td>
+                                        <td>2.5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </dd>
+                    <dt>Dimensions</dt>
+                    <dd>&#216;8cm x 10cm high</dd>
+                  </dl>
+              </div>
+              <div class="span2">
+                <ul class="thumbnails">
+                  <li class="span1">
+                    <a rel="prettyPhoto[pp_gal]" href="images/raku-bowl1.jpg" title="Glaze foam lid" class="thumbnail">
+                      <img src="images/raku-bowl1_thm.jpg" alt="">
+                    </a>
+                  </li>
+                  <li class="span1">
+                    <a rel="prettyPhoto[pp_gal]" href="images/raku-bowl2.jpg"  title="Glaze foam" class="thumbnail">
+                      <img src="images/raku-bowl2_thm.jpg" alt="">
+                    </a>
+                  </li>
+                  <li class="span1">
+                    <a rel="prettyPhoto[pp_gal]" href="images/raku-bowl3.jpg"  title="Cap partially chipped off" class="thumbnail">
+                      <img src="images/raku-bowl3_thm.jpg" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          
+          <div id="about-raku" class="explained">
+              <div class="row">
+                  <div class="span12">     
+                      <h2>About Raku</h2>
+                      <p>Some text in a box</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="row item">
+              <div class="span6 itemcol">
+                  <img id="image1" class="reel" src='images/raku-bowl.jpg' width="500" height="445"
+                    data-frames="15"
+                    data-footage="4"
+                    data-cw="true"
+                    data-throwable="true"
+                    data-velocity="2"
+                    data-responsive="true"
+                    data-klass="customreel"
+                  />
               </div>
               <div class="span3">
                   <h2>Raku Bowl</h2>
@@ -129,21 +219,16 @@
           </div>
           
           <div class="row item bottom">
-              <div class="span5 itemcol">
-                  <img id="image" src='images/raku-bowl.jpg' width="500" height="445" />
-                  <script>
-                    $(function(){ // when DOM ready
-              
-                      $('#image').reel({
-                        frames:   15,
-                        footage: 4,
-                        cw: true,
-                        throwable: true,
-                        velocity: 2,
-                        klass: 'customreel'
-                      });
-                    });
-                  </script>
+              <div class="span6 itemcol">
+                  <img id="image2" class="reel" src='images/raku-bowl.jpg' width="500" height="445"
+                    data-frames="15"
+                    data-footage="4"
+                    data-cw="true"
+                    data-throwable="true"
+                    data-velocity="2"
+                    data-responsive="true"
+                    data-klass="customreel"
+                  />
               </div>
               <div class="span3">
                   <h2>Another Raku Bowl</h2>
@@ -153,15 +238,19 @@
               </div>
           </div>
       </div>
-      <div class="about">
-          <div class="container">
-              <div class="row">
-                <div class="span12">
-                    <h2 id="about">About me</h2>
-                    <p class="lead">I'm a human being that makes things.</p>
+      
+      <!----------------------------------------------------------------------->
+      <div class="shadow">
+        <div class="about">
+            <div class="container">
+                <div class="row">
+                  <div class="span12">
+                      <h2 id="about">About me</h2>
+                      <p class="lead">I'm a human being that makes things.</p>
+                  </div>
                 </div>
-              </div>
-          </div>
+            </div>
+        </div>
       </div>
       <footer>
         <div class="container">
