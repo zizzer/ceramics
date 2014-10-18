@@ -23,6 +23,13 @@
                 })
             });
             
+            $('.glazelink').on('click', function(e) {
+                e.preventDefault();
+                var $this = $(this);
+                var $collapse = $this.closest('.collapse-group').find('.collapse');
+                $collapse.collapse('toggle');
+            });
+            
             $('.breadcrumb a').bind('click', function(e) {
                 e.preventDefault();
                 $('html,body').animate({scrollTop: $(this.hash).offset().top});                                                      
@@ -59,7 +66,134 @@
               </div>
           </div>
           
+          <!--
+          <div id="about-raku" class="explained">
+              <div class="row">
+                  <div class="span12">     
+                      <h2>About Raku</h2>
+                      <p>Some text in a box</p>
+                  </div>
+              </div>
+          </div>
+          -->
+          
           <div class="row item">
+              <div class="span6 itemcol">
+                  <img id="image1" class="reel" src='images/aventurine-bowl1.jpg' width="500" height="500"
+                    data-frames="16"
+                    data-footage="8"
+                    data-rows="3"
+                    data-frame="1"
+                    data-row="2"
+                    data-cw="true"
+                    data-throwable="true"
+                    data-velocity="2"
+                    data-responsive="true"
+                    data-klass="customreel"
+                  />
+              </div>
+              <div class="span3">
+                  <h2>Aventurine Bowl</h2>
+                  <p>This is a medium sized stoneware bowl with 3 glazes and some fluting on the outside at the base.</p>
+                  <dl class="dl">
+                    <dt>Firing</dt>
+                    <dd>Electric, Stoneware - 1280&deg;C</dd>
+                    <dt>Glazes</dt>
+                    <dd><a href="" class="glazelink" data-toggle="collapse" data-target="#aventurine1">John's Metallic</a> (outside)
+                        <div id="aventurine1" class="collapse">
+                            <table class="table table-bordered table-hover glaze">
+                                <tbody>
+                                    <tr>
+                                        <td>Custer Feldspar</td>
+                                        <td>27.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Silica</td>
+                                        <td>18.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gerstley Borate <br />(I used Borax Frit)</td>
+                                        <td>45.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lithium Carbonate</td>
+                                        <td>8.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Red Iron Oxide</td>
+                                        <td>28</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </dd>
+                    <dd><a href="" class="glazelink" data-toggle="collapse" data-target="#johnsred1">John's Red</a> (inside over white - P3)
+                        <div id="johnsred1" class="collapse">
+                            <table class="table table-bordered table-hover glaze">
+                                <tbody>
+                                    <tr>
+                                        <td>Custer Feldspar</td>
+                                        <td>48.2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Whiting</td>
+                                        <td>13.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Silica</td>
+                                        <td>15.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kaolin</td>
+                                        <td>5.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frit 3134 (Borax Frit)</td>
+                                        <td>9.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Talc</td>
+                                        <td>3.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zinc Oxide</td>
+                                        <td>4.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tin Oxide</td>
+                                        <td>1.2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Copper Carbonate</td>
+                                        <td>0.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bentonite</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </dd>
+                    <dt>Dimensions</dt>
+                    <dd>&#216;13.5cm x 8.5cm high</dd>
+                  </dl>
+              </div>
+              <div class="span2">
+                <ul class="thumbnails">
+                  <li class="span1">
+                  </li>
+                </ul>
+              </div>
+          </div>
+          
+          <div class="row item bottom">
               <div class="span6 itemcol">
                   <img id="image" class="reel" src='images/raku-bowl.jpg' width="500" height="445"
                     data-frames="15"
@@ -78,7 +212,7 @@
                     <dt>Firing</dt>
                     <dd>Raku</dd>
                     <dt>Glaze</dt>
-                    <dd><a href="#" class="glazelink" data-toggle="collapse" data-target="#hawaiian-blue">Hawaiian Blue</a>
+                    <dd><a href="" class="glazelink" data-toggle="collapse" data-target="#hawaiian-blue">Hawaiian Blue</a>
                         <div id="hawaiian-blue" class="collapse">
                             <table class="table table-bordered table-hover glaze">
                                 <tbody>
@@ -131,110 +265,6 @@
                     </a>
                   </li>
                 </ul>
-              </div>
-          </div>
-          
-          <div id="about-raku" class="explained">
-              <div class="row">
-                  <div class="span12">     
-                      <h2>About Raku</h2>
-                      <p>Some text in a box</p>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="row item">
-              <div class="span6 itemcol">
-                  <img id="image1" class="reel" src='images/raku-bowl.jpg' width="500" height="445"
-                    data-frames="15"
-                    data-footage="4"
-                    data-cw="true"
-                    data-throwable="true"
-                    data-velocity="2"
-                    data-responsive="true"
-                    data-klass="customreel"
-                  />
-              </div>
-              <div class="span3">
-                  <h2>Raku Bowl</h2>
-                  <p>This is a litte Raku fired bowl with a Hawaiian Blue glaze.</p>
-                  <dl class="dl">
-                    <dt>Firing</dt>
-                    <dd>Raku</dd>
-                    <dt>Glaze</dt>
-                    <dd><a href="#" class="glazelink" data-toggle="collapse" data-target="#hawaiian-blue">Hawaiian Blue</a>
-                        <div id="hawaiian-blue" class="collapse">
-                            <table class="table table-bordered table-hover glaze">
-                                <tbody>
-                                    <tr>
-                                        <td>Gerstley Borate <br />(I used Borax Frit)</td>
-                                        <td>80</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bone Ash</td>
-                                        <td>20</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tin Oxide</td>
-                                        <td>1.3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Copper Carbonate</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cobalt Oxide</td>
-                                        <td>2.5</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </dd>
-                    <dt>Dimensions</dt>
-                    <dd>&#216;8cm x 10cm high</dd>
-                  </dl>
-              </div>
-              <div class="span2">
-                <ul class="thumbnails">
-                  <li class="span1">
-                    <a rel="prettyPhoto[pp_gal]" href="images/raku-bowl1.jpg" title="Glaze foam lid" class="thumbnail">
-                      <img src="images/raku-bowl1_thm.jpg" alt="">
-                    </a>
-                  </li>
-                  <li class="span1">
-                    <a rel="prettyPhoto[pp_gal]" href="images/raku-bowl2.jpg"  title="Glaze foam" class="thumbnail">
-                      <img src="images/raku-bowl2_thm.jpg" alt="">
-                    </a>
-                  </li>
-                  <li class="span1">
-                    <a rel="prettyPhoto[pp_gal]" href="images/raku-bowl3.jpg"  title="Cap partially chipped off" class="thumbnail">
-                      <img src="images/raku-bowl3_thm.jpg" alt="">
-                    </a>
-                  </li>
-                </ul>
-              </div>
-          </div>
-          
-          <div class="row item bottom">
-              <div class="span6 itemcol">
-                  <img id="image2" class="reel" src='images/raku-bowl.jpg' width="500" height="445"
-                    data-frames="15"
-                    data-footage="4"
-                    data-cw="true"
-                    data-throwable="true"
-                    data-velocity="2"
-                    data-responsive="true"
-                    data-klass="customreel"
-                  />
-              </div>
-              <div class="span3">
-                  <h2>Another Raku Bowl</h2>
-                  <p>It's really the same as the last one, silly.</p>
-              </div>
-              <div class="span3">
               </div>
           </div>
       </div>
@@ -256,7 +286,7 @@
         <div class="container">
             <div class="row">
                 <div class="span6">
-                    <p>&copy 2013 Owen Tanner</p>
+                    <p>&copy 2014 Owen Tanner</p>
                 </div>
             </div>
         </div>
