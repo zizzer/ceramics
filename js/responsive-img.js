@@ -6,6 +6,8 @@
 // Licensed under the MIT license
 */
 
+var maxWidth = 0; //Stops the broswer loading smaller images if it's already been large enough to load HQ versions
+
 	function makeImagesResponsive(){
 
 			var viewport = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -67,7 +69,10 @@
 
 				//split defined query list
 
-					var queries_array = queries.split(',');
+				var queries_array = queries.split(',');
+                
+                //Store max width of browser
+                if (viewport > maxWidth) maxWidth = viewport;
 
 				//loop queries
 
@@ -79,7 +84,6 @@
 					//get condition and response
 					var condition = query[0];
 					var response = query[1];
-
 
 					//set empty variables
 					var conditionpx;
@@ -103,7 +107,6 @@
 							bool =  (viewport <= conditionpx[1]);
 
 						}
-
 					} else {
 
 						conditionpx = condition.split('>');
@@ -112,7 +115,7 @@
 
 							var next_query = queries_array[(j +1)].split(/:(.+)/);
 							var next_cond = next_query[0].split('>');
-							
+			
 							bool = (viewport >= conditionpx[1] && viewport < next_cond[1]);
 
 						} else {
@@ -120,12 +123,10 @@
 							bool = (viewport >= conditionpx[1]);
 
 						}
-
 					}
 
-
 					//check if document.width meets condition
-					if(bool){
+					if(bool && viewport >= maxWidth){
 
 						var isCrossDomain = response.indexOf('//') !== -1 ? 1 : 0;
 
@@ -135,7 +136,7 @@
 						} else {
 							new_source = basePath + response;
 						}
-
+                        
 						if(image.src !== new_source){
 
 							//change img src to basePath + response
